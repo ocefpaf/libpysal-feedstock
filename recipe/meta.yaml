@@ -28,6 +28,12 @@ requirements:
     - beautifulsoup4
 
 test:
+  requires:
+    - pip
+  # we can't use pip check here b/c it expects a pkg named bs4 and not beautifulsoup4.
+  # I'll report this upstream in the pip issue tracker.
+  # commands:
+    # - pip check
   imports:
     - libpysal
     - libpysal.cg
